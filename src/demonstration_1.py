@@ -21,4 +21,7 @@ of the duplicates.*
 """
 def remove_duplicates(nums):
     # Your code here
+    return list(dict.fromkeys(nums))
+result = remove_duplicates([0, 1, 2, 3, 3, 3, 4])
+print(result)
 

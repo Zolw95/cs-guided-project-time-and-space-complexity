@@ -21,4 +21,12 @@ complexities and think about the tradeoffs between the solutions.*
 """
 def contains_duplicate(nums):
     # Your code here
+    if len(nums) == len(set(nums)):
+        return False
+    else:
+        return True
+    print("Len of nums", len(nums))
+    print("Len of set nums", len(set(nums)))
+result = contains_duplicate([1,3,3,2,1])
+print(result)
 

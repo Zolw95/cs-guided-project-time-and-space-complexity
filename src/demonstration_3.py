@@ -17,4 +17,12 @@ Output `False`
 """
 def is_anagram(a, b):
     # Your code here
-
+    # sort strings
+    # if strings are identical - return True
+    # if not - print false
+    if (sorted(a) == sorted(b)):
+        return True
+    else:
+        return False
+result = is_anagram("junior", "orinuj")
+print(result)
