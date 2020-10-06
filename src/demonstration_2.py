@@ -20,6 +20,8 @@ time complexities of `O(n log n)` or `O(n)`. Possible space complexities are
 complexities and think about the tradeoffs between the solutions.*
 """
 def contains_duplicate(nums):
+    # Time complexity: O(n)
+    # Space complexity: O(1)
     # Your code here
     if len(nums) == len(set(nums)):
         return False
@@ -27,6 +29,26 @@ def contains_duplicate(nums):
         return True
     print("Len of nums", len(nums))
     print("Len of set nums", len(set(nums)))
-result = contains_duplicate([1,3,3,2,1])
+result = contains_duplicate([1])
 print(result)
 
+
+def prefixFreePhone(numbers):
+    # What if we sort numbers first?
+    # numbers is a list of strings, so it's going to sort alphabetically
+    #sort
+
+    #overall runtime is O(n log n)
+    #iterate through
+    #compare each element with the one right after it
+    # if the second element starts with the first, return false
+    #otherwise return True
+
+    numbers.sort()
+
+    for i in range(i, len(numbers) - 1):
+        first = numbers[i]
+        second = numbers[i + 1]
+        if second.startswith(first):
+            return False
+    return True
